@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản lý nhà hóa đơn nhập</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="../vendor/bootstrap.js"></script>
+    <script src="../js/cdn.js"></script>
+    <script src="../js/wow.js"></script>
+    <script src="../js/isotope.pkgd.min.js"></script>
+    <script src="../jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="../vendor/bootstrap.css" />
+    <link rel="stylesheet" href="../vendor/font-awesome.css" />
+    <link rel="icon" href="https://uma.vn/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://uma.vn/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="../animate.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Admin.css">
+    <script src="AdminHDN.js"></script>
+</head>
+
+<body>
+</body>
+<div class="menutrai">
+    <div class="logo">
+        <img src="IMAGES/project.png" alt="">
+        <span>Chức năng</span>
+    </div>
+    <ul>
+        <li>
+            <a href="AdminNCC.html">Quản lý nhà cung cấp</a>
+        </li>
+        <li>
+            <a href="AdminDM.html">Quản lý danh mục sản phẩm</a>
+        </li>
+        <li>
+            <a href="AdminSP.html">Quản lý sản phẩm</a>
+        </li>
+        <li>
+            <a href="AdminKH.html">Quản lý khách hàng</a>
+        </li>
+        <li>
+            <a href="AdminNV.html">Quản lý nhân viên</a>
+        </li>
+        <li class="active">
+            <a href="AdminHDN.html">Quản lý hóa đơn nhập</a>
+        </li>
+        <li>
+            <a href="AdminHDX.html">Quản lý hóa đơn xuất</a>
+        </li>
+    </ul>
+</div>
+<div class="khoiphai">
+    <!-- HTML CHO PHẦN HEADER -->
+    <div class="khoidau">
+        <div class="kd_trai">
+            <div class="thanhtk">
+                <input type="text" name="" placeholder="Tìm kiếm" id="otimkiem">
+                <a href="#" id="nuttk">
+                    <img src="IMAGES/icontk.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="kd_phai">
+            <div class="kp">
+                <div class="ngonngu">
+                    <img src="IMAGES/vietnam.png" alt="">
+                    <span>VN</span>
+                    <div class="layer_ngonngu">
+                        <a href="#">
+                            <img src="IMAGES/united-kingdom.png" alt="">
+                            <span>English</span>
+                        </a>
+                        <a href="#">
+                            <img src="IMAGES/france.png" alt="">
+                            <span>France</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="mail">
+                    <img src="IMAGES/email.png" alt="">
+                </a>
+                <a href="#" class="thongbao">
+                    <img src="IMAGES/bell.png" alt="">
+                </a>
+                <div class="user">
+                    <img src="IMAGES/user.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HTML CHO PHẦN HEADER -->
+
+
+    <!-- HTML CHO PHẦN DỮ LIỆU -->
+    <div class="dulieu">
+        <div class="dl_motkhoi">
+            <div class="dl_trai">
+                <h3 class="solieu slsp">278</h3>
+                <span>Hóa đơn nhập</span>
+            </div>
+            <div class="dl_phai">
+                <img src="IMAGES/receipt.png" alt="">
+            </div>
+        </div>
+        <!-- hết 1 khối -->
+        <div class="dl_motkhoi">
+            <div class="dl_trai">
+                <h3 class="solieu tslsp">12345</h3>
+                <span>Tổng số lượng nhập về</span>
+            </div>
+            <div class="dl_phai">
+                <img src="IMAGES/house.png" alt="">
+            </div>
+        </div>
+        <!-- hết 1 khối -->
+        <div class="dl_motkhoi">
+            <div class="dl_trai">
+                <h3 class="solieu tg">278.123.234 đ</h3>
+                <span>Tổng tiền nhập hàng</span>
+            </div>
+            <div class="dl_phai">
+                <img src="IMAGES/purse.png" alt="">
+            </div>
+        </div>
+        <!-- hết 1 khối -->
+        <!-- <div class="dl_motkhoi">
+      <div class="dl_trai">
+        <h3 class="solieu">278</h3>
+        <span>Sản phẩm</span>
+      </div>
+      <div class="dl_phai">
+        <img src="IMAGES/profile.png" alt="">
+      </div>
+    </div> -->
+        <!-- hết 1 khối -->
+    </div>
+    <!-- HẾT HTML CHO PHẦN DỮ LIỆU -->
+
+
+    <!-- HTML CHO PHẦN card-layer -->
+    <div class="card_layer">
+        <h5>Danh sách hóa đơn nhập</h5>
+        <div class="divnut">
+            <a href="#" class="nutthem">
+                <img src="IMAGES/add-square-button.png" alt="">
+                Thêm
+            </a>
+        </div>
+        <div class="danhsach">
+            <table class="bangdulieu">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Mã hóa đơn</th>
+                        <th>Mã nhà cung cấp</th>
+                        <th>Mã nhân viên</th>
+                        <th>Ngày nhập</th>
+                        <th>Thành tiền</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody class="nhieuitem">
+                    <tr>
+                        <td></td>
+                        <td>hdn01</td>
+                        <td>ncc01</td>
+                        <td>nv01</td>
+                        <td>2019-05-07</td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                            <a href="#" class="xemct" style="margin-left: 13px;"><img src="IMAGES/binoculars.png"
+                                    alt=""></a>
+                            <div class="chitiet">
+                                <ul class="tieude">
+                                    <li>Mã sản phẩm</li>
+                                    <li>Số lượng</li>
+                                    <li>Giá</li>
+                                    <li>Tổng tiền</li>
+                                    <li>Chức năng</li>
+                                    <li><a href="#" class="themct">
+                                            <img src="IMAGES/add-square-button.png" alt="">
+                                        </a></li>
+                                </ul>
+                                <ul class="dulieuchitiet">
+                                    <li>
+                                        <ul>
+                                            <li>sp01</li>
+                                            <li>45</li>
+                                            <li>12.300.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>sp02</li>
+                                            <li>75</li>
+                                            <li>3.200.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>hdn02</td>
+                        <td>ncc02</td>
+                        <td>nv02</td>
+                        <td>2017-03-08</td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                            <a href="#" class="xemct" style="margin-left: 13px;"><img src="IMAGES/binoculars.png"
+                                    alt=""></a>
+                            <div class="chitiet">
+                                <ul class="tieude">
+                                    <li>Mã sản phẩm</li>
+                                    <li>Số lượng</li>
+                                    <li>Giá</li>
+                                    <li>Tổng tiền</li>
+                                    <li>Chức năng</li>
+                                    <li><a href="#" class="themct">
+                                            <img src="IMAGES/add-square-button.png" alt="">
+                                        </a></li>
+                                </ul>
+                                <ul class="dulieuchitiet">
+                                    <li>
+                                        <ul>
+                                            <li>sp02</li>
+                                            <li>85</li>
+                                            <li>750.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>sp03</li>
+                                            <li>100</li>
+                                            <li>1.000.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>hdn03</td>
+                        <td>ncc03</td>
+                        <td>nv03</td>
+                        <td>2017-04-18</td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                            <a href="#" class="xemct" style="margin-left: 13px;"><img src="IMAGES/binoculars.png"
+                                    alt=""></a>
+                            <div class="chitiet">
+                                <ul class="tieude">
+                                    <li>Mã sản phẩm</li>
+                                    <li>Số lượng</li>
+                                    <li>Giá</li>
+                                    <li>Tổng tiền</li>
+                                    <li>Chức năng</li>
+                                    <li><a href="#" class="themct">
+                                            <img src="IMAGES/add-square-button.png" alt="">
+                                        </a></li>
+                                </ul>
+                                <ul class="dulieuchitiet">
+                                    <li>
+                                        <ul>
+                                            <li>sp03</li>
+                                            <li>200</li>
+                                            <li>450.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>sp07</li>
+                                            <li>30</li>
+                                            <li>11.450.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>hdn04</td>
+                        <td>ncc04</td>
+                        <td>nv04</td>
+                        <td>2019-01-15</td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                            <a href="#" class="xemct" style="margin-left: 13px;"><img src="IMAGES/binoculars.png"
+                                    alt=""></a>
+                            <div class="chitiet">
+                                <ul class="tieude">
+                                    <li>Mã sản phẩm</li>
+                                    <li>Số lượng</li>
+                                    <li>Giá</li>
+                                    <li>Tổng tiền</li>
+                                    <li>Chức năng</li>
+                                    <li><a href="#" class="themct">
+                                            <img src="IMAGES/add-square-button.png" alt="">
+                                        </a></li>
+                                </ul>
+                                <ul class="dulieuchitiet">
+                                    <li>
+                                        <ul>
+                                            <li>sp01</li>
+                                            <li>120</li>
+                                            <li>900.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>sp02</li>
+                                            <li>70</li>
+                                            <li>1.050.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>hdn05</td>
+                        <td>ncc05</td>
+                        <td>nv05</td>
+                        <td>2019-02-19</td>
+                        <td></td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                            <a href="#" class="xemct" style="margin-left: 13px;"><img src="IMAGES/binoculars.png"
+                                    alt=""></a>
+                            <div class="chitiet">
+                                <ul class="tieude">
+                                    <li>Mã sản phẩm</li>
+                                    <li>Số lượng</li>
+                                    <li>Giá</li>
+                                    <li>Tổng tiền</li>
+                                    <li>Chức năng</li>
+                                    <li><a href="#" class="themct">
+                                            <img src="IMAGES/add-square-button.png" alt="">
+                                        </a></li>
+                                </ul>
+                                <ul class="dulieuchitiet">
+                                    <li>
+                                        <ul>
+                                            <li>sp01</li>
+                                            <li>80</li>
+                                            <li>4.250.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>sp02</li>
+                                            <li>110</li>
+                                            <li>3.950.000 đ</li>
+                                            <li></li>
+                                            <li>
+                                                <a href="#" class="suact"><img src="IMAGES/edit.png" alt=""></a>
+                                                <a href="#" class="xoact"><img src="IMAGES/delete.png" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="nenden"></div>
+
+
+<!-- HTML FORM SỬA -->
+<div class="form_sua">
+    <h3>Sửa hóa đơn nhập</h3>
+    <a href="#" class="cls">
+        <img src="IMAGES/error.png" alt="">
+    </a>
+    <div class="k k_mahd">
+        <p>Mã hóa đơn</p>
+        <input type="text" name="" id="mahdSua" disabled>
+        <span class="cksua_mahd"></span>
+    </div>
+    <div class="k k_mancc">
+        <p>Mã nhà cung cấp</p>
+        <input type="text" name="" id="manccSua">
+        <span class="cksua_mancc"></span>
+    </div>
+    <div class="k k_manv">
+        <p>Mã nhân viên</p>
+        <input type="text" name="" id="manvSua">
+        <span class="cksua_manv"></span>
+    </div>
+    <div class="k k_ngaynhap">
+        <p>Ngày nhập</p>
+        <input type="date" name="" id="ngaynhapSua">
+        <span class="cksua_ngaynhap"></span>
+    </div>
+    <div class="cacnut">
+        <a href="#" class="nut_sua">
+            <img src="IMAGES/pencil-striped-symbol-for-interface-edit-buttons.png" alt="">
+            Sửa
+        </a>
+        <a href="#" class="nut_huy">
+            <img src="IMAGES/close.png" alt="">
+            Hủy
+        </a>
+    </div>
+</div>
+<!-- HẾT HTML FORM SỬA -->
+
+
+<!-- HTML FORM THÊM -->
+<div class="form_them">
+    <h3>Thêm hóa đơn nhập</h3>
+    <a href="#" class="cls">
+        <img src="IMAGES/error.png" alt="">
+    </a>
+    <div class="k k_mahd">
+        <p>Mã hóa đơn</p>
+        <input type="text" name="" id="mahdThem">
+        <span class="ckthem_mahd"></span>
+    </div>
+    <div class="k k_mancc">
+        <p>Mã nhà cung cấp</p>
+        <input type="text" name="" id="manccThem">
+        <span class="ckthem_mancc"></span>
+    </div>
+    <div class="k k_manv">
+        <p>Mã nhân viên</p>
+        <input type="text" name="" id="manvThem">
+        <span class="ckthem_manv"></span>
+    </div>
+    <div class="k k_ngaynhap">
+        <p>Ngày nhập</p>
+        <input type="date" name="" id="ngaynhapThem">
+        <span class="ckthem_ngaynhap"></span>
+    </div>
+    <div class="cacnut">
+        <a href="#" class="nut_them">
+            <img src="IMAGES/add-square-button.png" alt="">
+            Thêm
+        </a>
+        <a href="#" class="nut_huy">
+            <img src="IMAGES/close.png" alt="">
+            Hủy
+        </a>
+    </div>
+</div>
+<!-- HẾT HTML FORM THÊM -->
+
+
+<!-- HTML FORM THÊM CHI TIẾT -->
+<div class="form_them_ct">
+    <h3>Thêm chi tiết hóa đơn</h3>
+    <a href="#" class="cls_ct">
+        <img src="IMAGES/error.png" alt="">
+    </a>
+    <div class="k_ct k_masp_ct">
+        <p>Mã sản phẩm</p>
+        <input type="text" name="" id="maspThem">
+        <span class="ckthem_masp"></span>
+    </div>
+    <div class="k_ct k_sl">
+        <p>Số lượng</p>
+        <input type="text" name="" id="soluongThem">
+        <span class="ckthem_soluong"></span>
+    </div>
+    <div class="k_ct k_gia">
+        <p>Giá</p>
+        <input type="text" name="" id="giaThem">
+        <span class="ckthem_gia"></span>
+    </div>
+    <div class="cacnut_ct">
+        <a href="#" class="nut_them_ct">
+            <img src="IMAGES/add-square-button.png" alt="">
+            Thêm
+        </a>
+        <a href="#" class="nut_huy_ct">
+            <img src="IMAGES/close.png" alt="">
+            Hủy
+        </a>
+    </div>
+</div>
+<!-- HẾT HTML FORM THÊM CHI TIẾT -->
+<div class="form_sua_ct">
+    <h3>Sửa chi tiết hóa đơn</h3>
+    <a href="#" class="cls_ct">
+        <img src="IMAGES/error.png" alt="">
+    </a>
+    <div class="k_ct k_masp_ct">
+        <p>Mã sản phẩm</p>
+        <input type="text" name="" id="maspSua" disabled>
+        <span class="cksua_masp"></span>
+    </div>
+    <div class="k_ct k_sl">
+        <p>Số lượng</p>
+        <input type="text" name="" id="soluongSua">
+        <span class="cksua_soluong"></span>
+    </div>
+    <div class="k_ct k_gia">
+        <p>Giá</p>
+        <input type="text" name="" id="giaSua">
+        <span class="cksua_gia"></span>
+    </div>
+    <div class="cacnut_ct">
+        <a href="#" class="nut_sua_ct">
+            <img src="IMAGES/add-square-button.png" alt="">
+            Sửa
+        </a>
+        <a href="#" class="nut_huy_ct">
+            <img src="IMAGES/close.png" alt="">
+            Hủy
+        </a>
+    </div>
+</div>
+<!-- HTML FORM SỬA CHI TIẾT -->
+
+<!-- HẾT HTML FORM SỬA CHI TIẾT -->
+<!-- HTML CHO PHẦN TƯƠNG TÁC NGƯỜI DÙNG -->
+<div class="lendau">
+    <img src="../images/up-arrow.png" alt="">
+</div>
+<div class="thongbaothem">
+    <span>Thêm thành công</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="thongbaosua">
+    <span>Sửa thành công</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="thongbaoxoa">
+    <span>Xóa thành công</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<!-- HẾT HTML CHO PHẦN TƯƠNG TÁC NGƯỜI DÙNG -->
+
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Quản lý sản phẩm</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script type="text/javascript" src="../vendor/bootstrap.js"></script>
+  <script src="../js/cdn.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="../js/isotope.pkgd.min.js"></script>
+  <script src="../jquery.easing.1.3.js"></script>
+  <link rel="stylesheet" href="../vendor/bootstrap.css" />
+  <link rel="stylesheet" href="../vendor/font-awesome.css" />
+  <link rel="icon" href="https://uma.vn/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="https://uma.vn/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="../animate.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+    rel="stylesheet">
+  <link rel="stylesheet" href="AdminSP.css">
+  <script src="AdminSP.js"></script>
+</head>
+
+<body>
+</body>
+<div class="menutrai">
+  <div class="logo">
+    <img src="IMAGES/project.png" alt="">
+    <span>Chức năng</span>
+  </div>
+  <ul>
+    <li>
+      <a href="AdminNCC.html">Quản lý nhà cung cấp</a>
+    </li>
+    <li>
+      <a href="AdminDM.html">Quản lý danh mục sản phẩm</a>
+    </li>
+    <li class="active">
+      <a href="AdminSP.html">Quản lý sản phẩm</a>
+    </li>
+    <li>
+      <a href="AdminKH.html">Quản lý khách hàng</a>
+    </li>
+    <li>
+      <a href="AdminNV.html">Quản lý nhân viên</a>
+    </li>
+    <li>
+      <a href="AdminHDN.html">Quản lý hóa đơn nhập</a>
+    </li>
+    <li>
+      <a href="AdminHDX.html">Quản lý hóa đơn xuất</a>
+    </li>
+  </ul>
+</div>
+<div class="khoiphai">
+  <!-- HTML CHO PHẦN HEADER -->
+  <div class="khoidau">
+    <div class="kd_trai">
+      <div class="thanhtk">
+        <input type="text" name="" placeholder="Tìm kiếm" id="otimkiem">
+        <a href="#" id="nuttk">
+          <img src="IMAGES/icontk.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="kd_phai">
+      <div class="kp">
+        <div class="ngonngu">
+          <img src="IMAGES/vietnam.png" alt="">
+          <span>VN</span>
+          <div class="layer_ngonngu">
+            <a href="#">
+              <img src="IMAGES/united-kingdom.png" alt="">
+              <span>English</span>
+            </a>
+            <a href="#">
+              <img src="IMAGES/france.png" alt="">
+              <span>France</span>
+            </a>
+          </div>
+        </div>
+        <a href="#" class="mail">
+          <img src="IMAGES/email.png" alt="">
+        </a>
+        <a href="#" class="thongbao">
+          <img src="IMAGES/bell.png" alt="">
+        </a>
+        <div class="user">
+          <img src="IMAGES/user.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- HTML CHO PHẦN HEADER -->
+
+
+  <!-- HTML CHO PHẦN DỮ LIỆU -->
+  <div class="dulieu">
+    <div class="dl_motkhoi">
+      <div class="dl_trai">
+        <h3 class="solieu slsp">278</h3>
+        <span>Sản phẩm</span>
+      </div>
+      <div class="dl_phai">
+        <img src="IMAGES/shopping-store.png" alt="">
+      </div>
+    </div>
+    <!-- hết 1 khối -->
+    <div class="dl_motkhoi">
+      <div class="dl_trai">
+        <h3 class="solieu tslsp">12345</h3>
+        <span>Tổng số lượng</span>
+      </div>
+      <div class="dl_phai">
+        <img src="IMAGES/house.png" alt="">
+      </div>
+    </div>
+    <!-- hết 1 khối -->
+    <div class="dl_motkhoi">
+      <div class="dl_trai">
+        <h3 class="solieu tg">278</h3>
+        <span>Tổng giá trị sản phẩm</span>
+      </div>
+      <div class="dl_phai">
+        <img src="IMAGES/money-bag.png" alt="">
+      </div>
+    </div>
+    <!-- hết 1 khối -->
+    <!-- <div class="dl_motkhoi">
+      <div class="dl_trai">
+        <h3 class="solieu">278</h3>
+        <span>Sản phẩm</span>
+      </div>
+      <div class="dl_phai">
+        <img src="IMAGES/profile.png" alt="">
+      </div>
+    </div> -->
+    <!-- hết 1 khối -->
+  </div>
+  <!-- HẾT HTML CHO PHẦN DỮ LIỆU -->
+
+
+  <!-- HTML CHO PHẦN card-layer -->
+  <div class="card_layer">
+    <h5>Danh sách sản phẩm</h5>
+    <div class="divnut">
+      <a href="#" class="nutthem">
+        <img src="IMAGES/add-square-button.png" alt="">
+        Thêm
+      </a>
+    </div>
+    <div class="danhsach">
+      <table class="bangdulieu">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Mã</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Chức năng</th>
+          </tr>
+        </thead>
+        <tbody class="nhieuitem">
+          <tr>
+            <td></td>
+            <td>sp01</td>
+            <td>Kệ sách CONNEMARA</td>
+            <td>5.490.000 đ</td>
+            <td>305</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp02</td>
+            <td>Tủ quần áo BERNIE</td>
+            <td>3.990.000 đ</td>
+            <td>75</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp03</td>
+            <td>Bộ bàn ăn 4 ghế RALLY</td>
+            <td>5.990.000 đ</td>
+            <td>180</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp04</td>
+            <td>Kệ sách RALLY</td>
+            <td>6.490.000 đ</td>
+            <td>132</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp05</td>
+            <td>Sofa giường BOHEMIA</td>
+            <td>6.490.000 đ</td>
+            <td>145</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp06</td>
+            <td>Bộ bàn ăn 4 ghế AALBORG</td>
+            <td>4.490.000 đ</td>
+            <td>171</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp07</td>
+            <td>Giá treo đứng có gương REBEL</td>
+            <td>1.190.000 đ</td>
+            <td>139</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp08</td>
+            <td>Sofa giường KARLSTAD</td>
+            <td>14.400.000 đ</td>
+            <td>119</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt="Sửa"></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt="Xóa"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp09</td>
+            <td>Tủ bát đĩa PATERSON</td>
+            <td>9.990.000 đ</td>
+            <td>145</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt="Sửa"></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt="Xóa"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp10</td>
+            <td>Kệ TV RALLY</td>
+            <td>3.790.000 đ</td>
+            <td>137</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt="Sửa"></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt="Xóa"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp11</td>
+            <td>Đèn bàn làm việc KLAN</td>
+            <td>1.490.000 đ</td>
+            <td>175</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt="Sửa"></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt="Xóa"></a>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>sp12</td>
+            <td>Ghế thư giãn kết hợp giường MOMBASA</td>
+            <td>4.990.000 đ</td>
+            <td>189</td>
+            <td>
+              <a href="#" class="sua"><img src="IMAGES/edit.png" alt="Sửa"></a>
+              <a href="#" class="xoa"><img src="IMAGES/delete.png" alt="Xóa"></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="nenden"></div>
+
+
+<!-- HTML FORM SỬA -->
+<div class="form_sua">
+  <h3>Sửa sản phẩm</h3>
+  <a href="#" class="cls">
+    <img src="IMAGES/error.png" alt="">
+  </a>
+  <div class="k k_ma">
+    <p>Mã sản phẩm</p>
+    <input type="text" name="" id="maSua" disabled>
+    <span class="cksua_ma"></span>
+  </div>
+  <div class="k k_ten">
+    <p>Tên sản phẩm</p>
+    <input type="text" name="" id="tenSua">
+    <span class="cksua_ten"></span>
+  </div>
+  <div class="k k_gia">
+    <p>Giá</p>
+    <input type="text" name="" id="giaSua">
+    <span class="cksua_gia"></span>
+  </div>
+  <div class="k k_soluong">
+    <p>Số lượng</p>
+    <input type="text" name="" id="soluongSua">
+    <span class="cksua_soluong"></span>
+  </div>
+  <div class="cacnut">
+    <a href="#" class="nut_sua">
+      <img src="IMAGES/pencil-striped-symbol-for-interface-edit-buttons.png" alt="">
+      Sửa
+    </a>
+    <a href="#" class="nut_huy">
+      <img src="IMAGES/close.png" alt="">
+      Hủy
+    </a>
+  </div>
+</div>
+<!-- HẾT HTML FORM SỬA -->
+
+
+<!-- HTML FORM THÊM -->
+<div class="form_them">
+  <h3>Thêm sản phẩm</h3>
+  <a href="#" class="cls">
+    <img src="IMAGES/error.png" alt="">
+  </a>
+  <div class="k k_ma">
+    <p>Mã sản phẩm</p>
+    <input type="text" name="" id="maThem">
+    <span class="ckthem_ma"></span>
+  </div>
+  <div class="k k_ten">
+    <p>Tên sản phẩm</p>
+    <input type="text" name="" id="tenThem">
+    <span class="ckthem_ten"></span>
+  </div>
+  <div class="k k_gia">
+    <p>Giá</p>
+    <input type="text" name="" id="giaThem">
+    <span class="ckthem_gia"></span>
+  </div>
+  <div class="k k_soluong">
+    <p>Số lượng</p>
+    <input type="text" name="" id="soluongThem">
+    <span class="ckthem_soluong"></span>
+  </div>
+  <div class="cacnut">
+    <a href="#" class="nut_them">
+      <img src="IMAGES/add-square-button.png" alt="">
+      Thêm
+    </a>
+    <a href="#" class="nut_huy">
+      <img src="IMAGES/close.png" alt="">
+      Hủy
+    </a>
+  </div>
+</div>
+<!-- HẾT HTML FORM THÊM -->
+<!-- HTML CHO PHẦN TƯƠNG TÁC NGƯỜI DÙNG -->
+<div class="lendau">
+  <img src="../images/up-arrow.png" alt="">
+</div>
+<div class="thongbaothem">
+  <span>Thêm thành công</span>
+  <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="thongbaosua">
+  <span>Sửa thành công</span>
+  <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="thongbaoxoa">
+  <span>Xóa thành công</span>
+  <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<!-- HẾT HTML CHO PHẦN TƯƠNG TÁC NGƯỜI DÙNG -->
+
+</html>

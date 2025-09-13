@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Quản lý khách hàng</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="../vendor/bootstrap.js"></script>
+    <script src="../js/cdn.js"></script>
+    <script src="../js/wow.js"></script>
+    <script src="../js/isotope.pkgd.min.js"></script>
+    <script src="../jquery.easing.1.3.js"></script>
+    <link rel="stylesheet" href="../vendor/bootstrap.css" />
+    <link rel="stylesheet" href="../vendor/font-awesome.css" />
+    <link rel="icon" href="https://uma.vn/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://uma.vn/media/favicon/default/favicon_1_.ico" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="../animate.css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="AdminKH.css">
+    <script src="AdminKH.js"></script>
+</head>
+
+<body>
+</body>
+<div class="menutrai">
+    <div class="logo">
+        <img src="IMAGES/project.png" alt="">
+        <span>Chức năng</span>
+    </div>
+    <ul>
+        <li>
+            <a href="AdminNCC.html">Quản lý nhà cung cấp</a>
+        </li>
+        <li>
+            <a href="AdminDM.html">Quản lý danh mục sản phẩm</a>
+        </li>
+        <li>
+            <a href="AdminSP.html">Quản lý sản phẩm</a>
+        </li>
+        <li class="active">
+            <a href="AdminKH.html">Quản lý khách hàng</a>
+        </li>
+        <li>
+            <a href="AdminNV.html">Quản lý nhân viên</a>
+        </li>
+        <li>
+            <a href="AdminHDN.html">Quản lý hóa đơn nhập</a>
+        </li>
+        <li>
+            <a href="AdminHDX.html">Quản lý hóa đơn xuất</a>
+        </li>
+    </ul>
+</div>
+<div class="khoiphai">
+    <!-- HTML CHO PHẦN HEADER -->
+    <div class="khoidau">
+        <div class="kd_trai">
+            <div class="thanhtk">
+                <input type="text" name="" placeholder="Tìm kiếm" id="otimkiem">
+                <a href="#" id="nuttk">
+                    <img src="IMAGES/icontk.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="kd_phai">
+            <div class="kp">
+                <div class="ngonngu">
+                    <img src="IMAGES/vietnam.png" alt="">
+                    <span>VN</span>
+                    <div class="layer_ngonngu">
+                        <a href="#">
+                            <img src="IMAGES/united-kingdom.png" alt="">
+                            <span>English</span>
+                        </a>
+                        <a href="#">
+                            <img src="IMAGES/france.png" alt="">
+                            <span>France</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="mail">
+                    <img src="IMAGES/email.png" alt="">
+                </a>
+                <a href="#" class="thongbao">
+                    <img src="IMAGES/bell.png" alt="">
+                </a>
+                <div class="user">
+                    <img src="IMAGES/user.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HTML CHO PHẦN HEADER -->
+
+
+    <!-- HTML CHO PHẦN DỮ LIỆU -->
+    <div class="dulieu">
+        <div class="dl_motkhoi">
+            <div class="dl_trai">
+                <h3 class="solieu slsp">278</h3>
+                <span>Khách hàng</span>
+            </div>
+            <div class="dl_phai">
+                <img src="IMAGES/teamwork.png" alt="">
+            </div>
+        </div>
+        <!-- hết 1 khối -->
+        <div class="dl_motkhoi">
+            <div class="dl_trai">
+                <h3 class="solieu tslsp">12345</h3>
+                <span>Tổng số lượng</span>
+            </div>
+            <div class="dl_phai">
+                <img src="IMAGES/house.png" alt="">
+            </div>
+        </div>
+        <!-- hết 1 khối -->
+        <div class="dl_motkhoi">
+            <div class="dl_trai">
+                <h3 class="solieu tg">278.123.234 đ</h3>
+                <span>Tổng giá trị</span>
+            </div>
+            <div class="dl_phai">
+                <img src="IMAGES/money-bag.png" alt="">
+            </div>
+        </div>
+        <!-- hết 1 khối -->
+        <!-- <div class="dl_motkhoi">
+      <div class="dl_trai">
+        <h3 class="solieu">278</h3>
+        <span>Sản phẩm</span>
+      </div>
+      <div class="dl_phai">
+        <img src="IMAGES/profile.png" alt="">
+      </div>
+    </div> -->
+        <!-- hết 1 khối -->
+    </div>
+    <!-- HẾT HTML CHO PHẦN DỮ LIỆU -->
+
+
+    <!-- HTML CHO PHẦN card-layer -->
+    <div class="card_layer">
+        <h5>Danh sách khách hàng</h5>
+        <div class="divnut">
+            <a href="#" class="nutthem">
+                <img src="IMAGES/add-square-button.png" alt="">
+                Thêm
+            </a>
+        </div>
+        <div class="danhsach">
+            <table class="bangdulieu">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Mã</th>
+                        <th>Tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody class="nhieuitem">
+                    <tr>
+                        <td></td>
+                        <td>kh01</td>
+                        <td>Lê Xuân Thắng</td>
+                        <td>1999-05-30</td>
+                        <td>Nam</td>
+                        <td>Hưng Yên</td>
+                        <td>0971574029</td>
+                        <td>maxim3051999@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>kh02</td>
+                        <td>Đỗ Việt Tiến</td>
+                        <td>1997-03-13</td>
+                        <td>Nam</td>
+                        <td>Hưng Yên</td>
+                        <td>0971574029</td>
+                        <td>Viettienhy@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>kh03</td>
+                        <td>Lê Ánh Nguyệt</td>
+                        <td>1998-07-15</td>
+                        <td>Nữ</td>
+                        <td>Hà Nội</td>
+                        <td>0971574029</td>
+                        <td>Nguyet98hn@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>kh04</td>
+                        <td>Vũ Thị Sen</td>
+                        <td>1990-02-12</td>
+                        <td>Nữ</td>
+                        <td>Hưng Yên</td>
+                        <td>0975395478</td>
+                        <td>Vusen@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>kh05</td>
+                        <td>Lung Thị Linh</td>
+                        <td>1999-01-26</td>
+                        <td>Nữ</td>
+                        <td>Hưng Yên</td>
+                        <td>0927986326</td>
+                        <td>Lunglinh@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>kh06</td>
+                        <td>Lưu Đình Tuấn</td>
+                        <td>1992-10-15</td>
+                        <td>Nam</td>
+                        <td>Hải Phòng</td>
+                        <td>0943256431</td>
+                        <td>TuanLD@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>kh07</td>
+                        <td>Vũ Văn Thanh</td>
+                        <td>1991-08-05</td>
+                        <td>Nam</td>
+                        <td>Gia Lai</td>
+                        <td>0986143213</td>
+                        <td>ThanhGL@gmail.com</td>
+                        <td>
+                            <a href="#" class="sua"><img src="IMAGES/edit.png" alt=""></a>
+                            <a href="#" class="xoa"><img src="IMAGES/delete.png" alt=""></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="nenden"></div>
+
+
+<!-- HTML FORM SỬA -->
+<div class="form_sua">
+    <h3>Sửa khách hàng</h3>
+    <a href="#" class="cls">
+        <img src="IMAGES/error.png" alt="">
+    </a>
+    <div class="k k_ma">
+        <p>Mã khách hàng</p>
+        <input type="text" name="" id="maSua" disabled>
+        <span class="cksua_ma"></span>
+    </div>
+    <div class="k k_ten" style="display: inline-block;">
+        <p>Tên khách hàng</p>
+        <input type="text" name="" id="tenSua">
+        <span class="cksua_ten"></span>
+    </div>
+    <div class="k k_ngaysinh" style="display: block;float: right;">
+        <p>Ngày sinh</p>
+        <input type="date" value="" name="" id="ngaysinhSua">
+        <span class="cksua_ngaysinh"></span>
+    </div>
+    <div class="k k_gioitinh1">
+        <p>Giới tính</p>
+        <input type="radio" name="gioitinh" value="Nam" class="Nam"> Nam
+        <input type="radio" name="gioitinh" value="Nữ" class="Nu"> Nữ
+        <span class="cksua_gioitinh"></span>
+    </div>
+    <div class="k k_diachi" style="display: inline-block;">
+        <p>Địa chỉ</p>
+        <input type="text" name="" id="diachiSua">
+        <span class="cksua_diachi"></span>
+    </div>
+    <div class="k k_sdt" style="display: block;float: right;">
+        <p>Số điện thoại</p>
+        <input type="text" name="" id="sdtSua">
+        <span class="cksua_sdt"></span>
+    </div>
+    <div class="k k_email">
+        <p>Email</p>
+        <input type="text" name="" id="emailSua">
+        <span class="cksua_email"></span>
+    </div>
+    <div class="cacnut">
+        <a href="#" class="nut_sua">
+            <img src="IMAGES/pencil-striped-symbol-for-interface-edit-buttons.png" alt="">
+            Sửa
+        </a>
+        <a href="#" class="nut_huy">
+            <img src="IMAGES/close.png" alt="">
+            Hủy
+        </a>
+    </div>
+</div>
+<!-- HẾT HTML FORM SỬA -->
+
+
+<!-- HTML FORM THÊM -->
+<div class="form_them">
+    <h3>Thêm khách hàng</h3>
+    <a href="#" class="cls">
+        <img src="IMAGES/error.png" alt="">
+    </a>
+    <div class="k k_ma">
+        <p>Mã khách hàng</p>
+        <input type="text" name="" id="maThem">
+        <span class="ckthem_ma"></span>
+    </div>
+    <div class="k k_ten" style="display: inline-block;">
+        <p>Tên khách hàng</p>
+        <input type="text" name="" id="tenThem">
+        <span class="ckthem_ten"></span>
+    </div>
+    <div class="k k_ngaysinh" style="display: block; float: right;">
+        <p>Ngày sinh</p>
+        <input type="date" value="" name="" id="ngaysinhThem">
+        <span class="ckthem_ngaysinh"></span>
+    </div>
+    <div class="k k_gioitinh">
+        <p>Giới tính</p>
+        <input type="radio" name="gioitinh" value="Nam" class="Nam"> Nam
+        <input type="radio" name="gioitinh" value="Nữ" class="Nu"> Nữ
+        <span class="ckthem_gioitinh"></span>
+    </div>
+    <div class="k k_diachi" style="display: inline-block;">
+        <p>Địa chỉ</p>
+        <input type="text" name="" id="diachiThem">
+        <span class="ckthem_diachi"></span>
+    </div>
+    <div class="k k_sdt" style="display: block;float: right;">
+        <p>Số điện thoại</p>
+        <input type="text" name="" id="sdtThem">
+        <span class="ckthem_sdt"></span>
+    </div>
+    <div class="k k_email">
+        <p>Email</p>
+        <input type="text" name="" id="emailThem">
+        <span class="ckthem_email"></span>
+    </div>
+    <div class="cacnut">
+        <a href="#" class="nut_them">
+            <img src="IMAGES/add-square-button.png" alt="">
+            Thêm
+        </a>
+        <a href="#" class="nut_huy">
+            <img src="IMAGES/close.png" alt="">
+            Hủy
+        </a>
+    </div>
+</div>
+<!-- HẾT HTML FORM THÊM -->
+<!-- HTML CHO PHẦN TƯƠNG TÁC NGƯỜI DÙNG -->
+<div class="lendau">
+    <img src="../images/up-arrow.png" alt="">
+</div>
+<div class="thongbaothem">
+    <span>Thêm thành công</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="thongbaosua">
+    <span>Sửa thành công</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<div class="thongbaoxoa">
+    <span>Xóa thành công</span>
+    <i class="fa fa-times" aria-hidden="true"></i>
+</div>
+<!-- HẾT HTML CHO PHẦN TƯƠNG TÁC NGƯỜI DÙNG -->
+
+</html>
